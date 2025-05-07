@@ -1,0 +1,369 @@
+/* Жуткая тема для квестов */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap');
+
+/* Переменные для жуткой темы */
+:root {
+	--primary-color: #8b0000; /* Темно-кровавый */
+	--secondary-color: #3c2f2f; /* Грязно-коричневый */
+	--background-color: #0a0a0a; /* Почти черный фон */
+	--card-background: #1c1c1c; /* Темно-серый для карточек */
+	--text-color: #d9d9d9; /* Бледно-серый текст */
+	--text-muted: #666666; /* Приглушенный серый */
+	--border-color: #4b0000; /* Темно-красная граница */
+	--hover-color: #ff6666; /* Более яркий красный для наведения */
+	--shadow-color: rgba(139, 0, 0, 0.6); /* Тень с красным оттенком */
+	--bloody-text-color: #ff3333; /* Яркий кровавый для лучшей видимости */
+}
+
+/* Общий фон */
+body {
+	font-family: 'Roboto', sans-serif;
+	background: url('https://www.transparenttextures.com/patterns/grunge.png'), 
+		linear-gradient(180deg, #0a0a0a 0%, #1c1c1c 50%, #000000 100%);
+	background-size: cover;
+	background-attachment: fixed;
+	color: var(--text-color);
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+}
+
+/* Заголовки */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Creepster', cursive;
+	color: var(--bloody-text-color);
+	text-shadow: 1px 1px 5px var(--shadow-color);
+}
+
+/* Кровавый заголовок */
+.bloody-title {
+	font-family: 'Creepster', cursive;
+	font-size: 3.5rem;
+	color: var(--bloody-text-color);
+	text-align: center;
+	margin-bottom: 2rem;
+	text-shadow: 0 0 8px var(--bloody-text-color), 0 0 15px var(--primary-color);
+	position: relative;
+}
+
+/* Меньший заголовок для карусели и карточек */
+.bloody-title-sm {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+/* Статичный эффект потеков крови */
+.bloody-title::after,
+.bloody-title-sm::after {
+	content: '';
+	position: absolute;
+	bottom: -15px;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	background: linear-gradient(180deg, var(--bloody-text-color), var(--primary-color));
+	border-radius: 50%;
+	opacity: 0.7;
+}
+
+h2 {
+	font-size: 2.2rem;
+	margin-bottom: 1.5rem;
+}
+
+h3 {
+	font-size: 1.7rem;
+	margin-bottom: 1rem;
+}
+
+/* Кровавый текст */
+.bloody-text {
+	font-family: 'Creepster', cursive;
+	color: var(--bloody-text-color);
+	text-shadow: 0 0 5px var(--bloody-text-color), 0 0 10px var(--primary-color);
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+/* Основной текст */
+.main-text {
+	color: var(--text-color);
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 1.5rem 2.5rem;
+	border-radius: 8px;
+	text-align: center;
+	max-width: 700px;
+	margin: 2rem auto;
+	font-size: 1.6rem;
+	border: 1px solid var(--border-color);
+}
+
+/* Текст */
+p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.3rem;
+	color: var(--text-color);
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+/* Хедер */
+header {
+	background-color: var(--card-background);
+	padding: 1rem;
+	text-align: center;
+	border-bottom: 2px solid var(--border-color);
+}
+
+/* Футер */
+footer {
+	background-color: var(--background-color);
+	color: var(--bloody-text-color);
+	text-align: center;
+	padding: 1rem;
+	border-top: 2px solid var(--border-color);
+	font-family: 'Creepster', cursive;
+	font-size: 1.2rem;
+	text-shadow: 0 0 8px var(--bloody-text-color), 0 0 15px var(--primary-color);
+	position: relative;
+}
+
+footer::after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	height: 8px;
+	background: linear-gradient(180deg, var(--bloody-text-color), var(--primary-color));
+	border-radius: 50%;
+	opacity: 0.7;
+}
+
+/* Карусель */
+.bloody-carousel {
+	border: 2px solid var(--border-color);
+	border-radius: 10px;
+}
+
+.bloody-carousel img {
+	border-radius: 8px;
+	border: 2px solid var(--border-color);
+	box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+/* Подпись карусели */
+.bloody-caption {
+	background: rgba(0, 0, 0, 0.7) !important;
+	padding: 20px;
+	border-radius: 10px;
+	border: 1px solid var(--border-color);
+}
+
+/* Карточки */
+.card {
+	background-color: var(--card-background);
+	color: var(--text-color);
+	border: 2px solid var(--border-color);
+	border-radius: 10px;
+	box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+/* Изображение карточки */
+.card-img-top {
+	border: 2px solid var(--border-color);
+	border-radius: 8px 8px 0 0;
+	box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+/* Тело карточки */
+.card-body {
+	background-color: var(--card-background);
+}
+
+/* Заголовок карточки */
+.card-title {
+	font-family: 'Creepster', cursive;
+	color: var(--bloody-text-color);
+	text-shadow: 0 0 5px var(--bloody-text-color), 0 0 10px var(--primary-color);
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+
+/* Текст карточки */
+.card-text {
+	font-family: 'Creepster', cursive;
+	color: var(--bloody-text-color);
+	text-shadow: 0 0 5px var(--bloody-text-color), 0 0 10px var(--primary-color);
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+/* Характеристики карточки */
+.card-body div {
+	font-family: 'Creepster', cursive;
+	color: var(--bloody-text-color);
+	text-shadow: 0 0 5px var(--bloody-text-color), 0 0 10px var(--primary-color);
+	font-size: 1.1rem;
+	margin-bottom: 0.5rem;
+	font-weight: 700;
+}
+
+/* Рейтинг */
+.star-rating {
+	filter: drop-shadow(0 0 5px var(--shadow-color));
+}
+
+/* Кнопки */
+button,
+.btn {
+	background-color: var(--primary-color);
+	color: var(--text-color);
+	border: 1px solid var(--border-color);
+}
+
+/* Кровавые кнопки */
+.bloody-button {
+	font-family: 'Creepster', cursive !important;
+	font-size: 1.2rem !important;
+	color: var(--bloody-text-color) !important;
+	background-color: rgba(0, 0, 0, 0.5) !important;
+	border: 2px solid var(--border-color) !important;
+	padding: 0.5rem 1rem !important;
+	border-radius: 6px !important;
+	text-shadow: 0 0 5px var(--bloody-text-color), 0 0 10px var(--primary-color) !important;
+	transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.2s ease !important;
+	position: relative;
+	font-weight: 700;
+}
+
+.bloody-button::after {
+	content: '';
+	position: absolute;
+	bottom: -8px;
+	left: 0;
+	width: 100%;
+	height: 6px;
+	background: linear-gradient(180deg, var(--bloody-text-color), var(--primary-color));
+	border-radius: 50%;
+	opacity: 0.7;
+}
+
+.bloody-button:hover {
+	color: var(--hover-color) !important;
+	text-shadow: 0 0 8px var(--hover-color) !important;
+	transform: translateY(-3px);
+	background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Переопределяем стили Bootstrap */
+.btn.bloody-button,
+.btn.bloody-button:hover,
+.btn.bloody-button:focus,
+.btn.bloody-button:active {
+	background-color: rgba(0, 0, 0, 0.5) !important;
+	border: 2px solid var(--border-color) !important;
+	color: var(--bloody-text-color) !important;
+}
+
+.btn.bloody-button:hover {
+	color: var(--hover-color) !important;
+	background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Ссылки */
+a {
+	color: var(--primary-color);
+	text-decoration: none;
+}
+
+/* Навбар */
+.navbar {
+	background: linear-gradient(180deg, var(--background-color), var(--card-background));
+	border-bottom: 3px solid var(--border-color);
+}
+
+.navbar-brand {
+	font-family: 'Creepster', cursive;
+	font-size: 2rem;
+	color: var(--bloody-text-color);
+	text-shadow: 0 0 8px var(--bloody-text-color), 0 0 15px var(--primary-color);
+	font-weight: 700;
+}
+
+.navbar-brand img {
+	filter: drop-shadow(0 0 10px var(--shadow-color));
+}
+
+.nav-link {
+	font-family: 'Creepster', cursive;
+	font-size: 1.3rem;
+	color: var(--bloody-text-color);
+	text-shadow: 0 0 5px var(--bloody-text-color), 0 0 10px var(--primary-color);
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	font-weight: 700;
+}
+
+.nav-link:hover {
+	color: var(--hover-color);
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Аватарка пользователя */
+.nav-link .d-flex img {
+	border: 3px solid var(--border-color);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+	.bloody-title {
+		font-size: 2.5rem;
+	}
+
+	.bloody-title-sm {
+		font-size: 1.5rem;
+	}
+
+	.bloody-text {
+		font-size: 1rem;
+	}
+
+	.bloody-button {
+		font-size: 1rem !important;
+	}
+
+	.card-title {
+		font-size: 1.5rem;
+	}
+
+	.card-text {
+		font-size: 1rem;
+	}
+
+	.card-body div {
+		font-size: 0.9rem;
+	}
+
+	.nav-link {
+		font-size: 1.1rem;
+	}
+
+	h2 {
+		font-size: 1.8rem;
+	}
+
+	h3 {
+		font-size: 1.4rem;
+	}
+
+	p {
+		font-size: 1.1rem;
+	}
+}
